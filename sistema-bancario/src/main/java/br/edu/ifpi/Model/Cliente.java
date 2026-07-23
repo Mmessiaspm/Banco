@@ -1,6 +1,7 @@
 package br.edu.ifpi.Model;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,13 +12,19 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "cliente")
 public class Cliente extends Pessoa implements Autenticavel {
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-     private String endereco;
-     private String telefone;
-     private String senha;
+    @Column(name = "cpf", nullable = false, unique = true)
+    private String cpf;
+
+    @Column(name = "endereco", nullable = false)  
+    private String endereco;
+    @Column(name = "telefone", nullable = false)
+    private String telefone;
+    @Column(name = "senha", nullable = false)   
+    private String senha;
 
       public String getSenha() {
          return this.senha;
@@ -57,6 +64,14 @@ public class Cliente extends Pessoa implements Autenticavel {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
 }

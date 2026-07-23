@@ -22,7 +22,7 @@ public class Pessoa {
     @Column(name = "nome", nullable = false)
     private String nome; 
 
-    @Column
+    @Column(name = "data_nasc", nullable = false)
     private String dataNasc;
     
 
