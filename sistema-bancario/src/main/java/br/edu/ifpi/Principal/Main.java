@@ -3,7 +3,9 @@ package br.edu.ifpi.Principal;
 import java.util.Scanner;
 
 import br.edu.ifpi.DAO.ClienteDAO;
+import br.edu.ifpi.DAO.JPAUtil;
 import br.edu.ifpi.Model.Cliente;
+import br.edu.ifpi.Model.Endereco;
 
 public class Main {
 
@@ -11,6 +13,11 @@ public class Main {
    
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+
+        // Fecha o EntityManagerFactory ao terminar a JVM
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            JPAUtil.close();
+        }));
 
         ClienteDAO clienteDAO = new ClienteDAO();
         while (true) {
@@ -33,6 +40,7 @@ public class Main {
             switch (opcao) {
                 case 1:
                     Cliente cliente = new Cliente();
+                    Endereco endereco = new Endereco();
                     try {
                         System.out.print("Digite o nome do cliente: ");
                         cliente.setNome(entrada.nextLine());
@@ -40,8 +48,21 @@ public class Main {
                         cliente.setCpf(entrada.nextLine());
                         System.out.print("Digite a data de nascimento do cliente (dd/mm/aaaa): ");
                         cliente.setDataNasc(entrada.nextLine());
-                        System.out.print("Digite o endereço do cliente: ");
-                        cliente.setEndereco(entrada.nextLine());
+                        System.out.print("Digite o logradouro do cliente: ");
+                        endereco.setLogradouro(entrada.nextLine());    
+                        System.out.print("Digite número: ");
+                        endereco.setNumero(entrada.nextLine());
+                        System.out.print("Digite o complemento: ");
+                        endereco.setComplemento(entrada.nextLine());
+                        System.out.print("Digite o bairro: ");
+                        endereco.setBairro(entrada.nextLine());
+                        System.out.print("Digite a cidade: ");
+                        endereco.setCidade(entrada.nextLine());
+                        System.out.print("Digite o estado: ");
+                        endereco.setEstado(entrada.nextLine());
+                        System.out.print("Digite o CEP: ");
+                        endereco.setCep(entrada.nextLine());
+                        cliente.setEndereco(endereco);
                         System.out.print("Digite o telefone do cliente: ");
                         cliente.setTelefone(entrada.nextLine());
                         System.out.print("Digite a senha do cliente: ");

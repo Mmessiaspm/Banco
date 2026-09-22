@@ -1,0 +1,17 @@
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/DAO/ClienteDAO.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/DAO/JPAUtil.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Agencia.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Autenticavel.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Banco.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Cliente.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Conta.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/ContaCorrente.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/ContaPoupanca.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Diretor.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Endereco.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Funcionario.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Gerente.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/Pessoa.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/PessoaFisica.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Model/PessoaJuridica.java
+/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario/src/main/java/br/edu/ifpi/Principal/Main.java

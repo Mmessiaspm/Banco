@@ -13,6 +13,9 @@ public class ClienteDAO {
             EntityTransaction transaction = em.getTransaction();
             try {
                 transaction.begin();
+                if (cliente.getEndereco() != null) {
+                    em.persist(cliente.getEndereco());
+                }
                 em.persist(cliente);
                 transaction.commit();
             } catch (Exception e) {
@@ -43,6 +46,7 @@ public class ClienteDAO {
             return null;
         }
     }
+    
 
 
 
