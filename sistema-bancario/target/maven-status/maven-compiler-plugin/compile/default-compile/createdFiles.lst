@@ -1,0 +1,17 @@
+br/edu/ifpi/Model/Conta.class
+br/edu/ifpi/Model/Gerente.class
+br/edu/ifpi/Model/Endereco.class
+br/edu/ifpi/Principal/Main.class
+br/edu/ifpi/Model/Funcionario.class
+br/edu/ifpi/Model/Cliente.class
+br/edu/ifpi/DAO/JPAUtil.class
+br/edu/ifpi/Model/Agencia.class
+br/edu/ifpi/Model/PessoaFisica.class
+br/edu/ifpi/Model/ContaPoupanca.class
+br/edu/ifpi/Model/PessoaJuridica.class
+br/edu/ifpi/Model/Banco.class
+br/edu/ifpi/Model/Diretor.class
+br/edu/ifpi/Model/Pessoa.class
+br/edu/ifpi/Model/Autenticavel.class
+br/edu/ifpi/DAO/ClienteDAO.class
+br/edu/ifpi/Model/ContaCorrente.class

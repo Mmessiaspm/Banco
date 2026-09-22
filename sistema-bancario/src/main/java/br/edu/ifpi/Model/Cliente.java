@@ -1,11 +1,14 @@
 package br.edu.ifpi.Model;
 
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 
@@ -19,12 +22,16 @@ public class Cliente extends Pessoa implements Autenticavel {
     @Column(name = "cpf", nullable = false, unique = true)
     private String cpf;
 
-    @Column(name = "endereco", nullable = false)  
-    private String endereco;
     @Column(name = "telefone", nullable = false)
     private String telefone;
+
     @Column(name = "senha", nullable = false)   
     private String senha;
+    
+    @OneToOne(optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "endereco_id", unique = true)
+    private Endereco endereco;
+
 
       public String getSenha() {
          return this.senha;
@@ -34,17 +41,13 @@ public class Cliente extends Pessoa implements Autenticavel {
          this.senha = senha;
      }
 
-     public String getEndereco() {
-         return this.endereco;
-     }
+     
 
      public String getTelefone() {
          return this.telefone;
      }
 
-     public void setEndereco(String endereco) {
-         this.endereco = endereco;
-     }
+   
 
      public void setTelefone(String telefone) {
          this.telefone = telefone;
@@ -70,8 +73,18 @@ public class Cliente extends Pessoa implements Autenticavel {
         return cpf;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+   
 
 }
