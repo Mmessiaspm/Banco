@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "type": "java",
+        "name": "Main",
+        "request": "launch",
+        "mainClass": "br.edu.ifpi.Principal.Main",
+        "projectName": "sistema-bancario"
+    },
+    {
+        "name": "Sistema Bancário",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "cd '/Users/mmessias/Library/Mobile Documents/com~apple~CloudDocs/IFPI/2026.1/Programação Orientada a Objetos 3 ANO B/Banco/sistema-bancario' && mvn -q exec:java -Dexec.mainClass=br.edu.ifpi.Principal.Main"
+    }
+]
+}

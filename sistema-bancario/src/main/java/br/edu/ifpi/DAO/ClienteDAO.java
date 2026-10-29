@@ -1,6 +1,7 @@
 package br.edu.ifpi.DAO;
 
 import br.edu.ifpi.Model.Cliente;
+import br.edu.ifpi.Model.Conta;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.NoResultException;
@@ -46,8 +47,31 @@ public class ClienteDAO {
             return null;
         }
     }
-    
 
+    public void associarConta(String cpf, Conta conta) {
+        try (EntityManager em = JPAUtil.getEntityManager()) {
+            EntityTransaction transaction = em.getTransaction();
+            try {
+                transaction.begin();
 
+                Cliente cliente = em.createQuery(
+                        "SELECT c FROM Cliente c LEFT JOIN FETCH c.contas WHERE c.cpf = :cpf",
+                        Cliente.class)
+                        .setParameter("cpf", cpf)
+                        .getSingleResult();
+
+                em.persist(conta);
+                cliente.getContas().add(conta);
+                conta.getClientes().add(cliente);
+
+                transaction.commit();
+            } catch (Exception e) {
+                if (transaction.isActive()) {
+                    transaction.rollback();
+                }
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
