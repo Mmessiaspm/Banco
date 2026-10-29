@@ -1,9 +1,10 @@
 package br.edu.ifpi.DAO;
 
+import java.util.List;
+
 import br.edu.ifpi.Model.Agencia;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 
 public class AgenciaDAO {
@@ -32,15 +33,12 @@ public class AgenciaDAO {
 
     public Agencia buscarPorNumero(int numero) {
         try (EntityManager em = JPAUtil.getEntityManager()) {
-            // Cria a consulta JPQL para buscar por código
             String jpql = "SELECT a FROM Agencia a WHERE a.numero = :numero";
             TypedQuery<Agencia> query = em.createQuery(jpql, Agencia.class);
             query.setParameter("numero", numero);
 
-            // Retorna o resultado da consulta, ou null se não for encontrado
-            return query.getSingleResult();
-        } catch (NoResultException e) {
-            return null;
+            List<Agencia> resultado = query.getResultList();
+            return resultado.isEmpty() ? null : resultado.get(0);
         }
     }
 }

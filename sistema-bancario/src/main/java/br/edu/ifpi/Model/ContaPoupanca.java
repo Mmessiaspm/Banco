@@ -1,5 +1,10 @@
 package br.edu.ifpi.Model;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("POUPANCA")
 public class ContaPoupanca extends Conta {
 
     private double rendimento;

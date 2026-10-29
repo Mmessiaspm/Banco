@@ -1,13 +1,19 @@
 package br.edu.ifpi.Model;
 
 
+import java.util.HashSet;
+import java.util.Set;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -32,6 +38,14 @@ public class Cliente extends Pessoa implements Autenticavel {
     @JoinColumn(name = "endereco_id", unique = true)
     private Endereco endereco;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+        name = "cliente_conta", 
+        joinColumns = @JoinColumn(name = "cliente_id"), 
+        inverseJoinColumns = @JoinColumn(name = "conta_id")
+    )
+    private Set<Conta> contas = new HashSet<>();
+    
 
       public String getSenha() {
          return this.senha;
@@ -42,6 +56,14 @@ public class Cliente extends Pessoa implements Autenticavel {
      }
 
      
+
+     public Set<Conta> getContas() {
+        return contas;
+    }
+
+      public void setContas(Set<Conta> contas) {
+          this.contas = contas;
+      }
 
      public String getTelefone() {
          return this.telefone;
