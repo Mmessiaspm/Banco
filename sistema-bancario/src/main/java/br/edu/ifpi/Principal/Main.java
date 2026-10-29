@@ -5,7 +5,6 @@ import java.util.Scanner;
 import br.edu.ifpi.DAO.AgenciaDAO;
 import br.edu.ifpi.DAO.BancoDAO;
 import br.edu.ifpi.DAO.ClienteDAO;
-import br.edu.ifpi.DAO.ContaDAO;
 import br.edu.ifpi.DAO.JPAUtil;
 import br.edu.ifpi.Model.Agencia;
 import br.edu.ifpi.Model.Banco;
@@ -103,7 +102,7 @@ public class Main {
                     System.out.println("Cadastro de Conta.");
                     System.out.print("Digite o tipo da conta (1) - Corrente, (2) - Poupança: ");
                     int tipoConta = lerInteiro(entrada);
-                    ContaDAO contaDAO = new ContaDAO();
+                    //ContaDAO contaDAO = new ContaDAO();
                     if (tipoConta == 1) {
                         ContaCorrente contaCorrente = new ContaCorrente();
                         System.out.print("Digite o número da conta corrente: ");
